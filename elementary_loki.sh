@@ -28,6 +28,7 @@ sudo burg-install /dev/sda
 sudo update-burg
 
 # [TODO] Metro BURG theme
+# wget https://www.dropbox.com/s/06o7qqv8wiuxo2w/metro_burg_theme_by_luxieblack-d5kch8g.zip?dl=0
 
 # Personal Software
 
