@@ -29,6 +29,9 @@ sudo update-burg
 
 # [TODO] Metro BURG theme
 # wget https://www.dropbox.com/s/06o7qqv8wiuxo2w/metro_burg_theme_by_luxieblack-d5kch8g.zip?dl=0
+# Browse to the downloaded archive file and double click - Extract the archive to /boot/burg/themes.
+# If there is an icon folder inside the archive, then extract the icon files to the folder /boot/burg/themes/icons
+# edit resolution at /boot/burg/burg.cfg
 
 # Personal Software
 
