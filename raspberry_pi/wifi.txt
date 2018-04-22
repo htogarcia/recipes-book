@@ -1,0 +1,32 @@
+# SOURCE 1: https://www.maketecheasier.com/setup-wifi-on-raspberry-pi/
+# SOURCE 2: https://www.raspberrypi.org/forums/viewtopic.php?t=163442
+
+
+# reinstall wireless software
+$ sudo apt-get install wpasupplicant wireless-tools
+
+# apend info to interfaces file ...
+$ sudo nano /etc/network/interfaces
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+
+# get a list of currently available networks
+$ sudo iwlist wlan0 scan | grep ESSID
+
+# apend wireless security info to wpa_supplicant.conf
+$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+network={
+        ssid="YourSSID"
+        psk="password"
+        key_mgmt=WPA-PSK
+}
+
+$ sudo reboot
+
+$ sudo ifdown wlan0
+
+$ sudo ifup wlan0
